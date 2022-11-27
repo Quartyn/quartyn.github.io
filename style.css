@@ -1,0 +1,79 @@
+*,
+/* #region Root */
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #1a1b26;
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: 1.6;
+}
+#app {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(20px, 5vw, 40px);
+}
+/* #endregion */
+
+/* #region Main Content */
+.content-title {
+    font-size: 2.3rem;
+    color: #fff;
+    margin-block-end: 30px;
+}
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 25px;
+}
+/* #endregion */
+
+/* #region Cards */
+.challenge-card {
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,.08);
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: scale .3s ease-out, background-color .2s ease-out, box-shadow .4s ease-in;
+}
+.challenge-card:hover {
+    scale: 1.03;
+    background-color: rgba(255,255,255,.11);
+    box-shadow: 0 0 7px rgba(255,255,255,.12);
+}
+.challenge-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.challenge-image {
+    width: 100%;
+    border-radius: 12px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.challenge-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.tag {
+    display: flex;
+    padding: 5px 10px;
+}
+/* #endregion */
